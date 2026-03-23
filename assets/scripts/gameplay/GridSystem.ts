@@ -21,10 +21,10 @@ export class GridSystem extends Component {
     @property
     gridHeight: number = 8;
 
-    @property({ type: Color })
+    @property
     gridLineColor: Color = new Color(22, 33, 62, 255); // #16213E
 
-    @property({ type: Color })
+    @property
     gridBackgroundColor: Color = new Color(26, 26, 46, 255); // #1A1A2E
 
     private graphics: Graphics | null = null;

@@ -36,7 +36,8 @@ import {
     director,
     warn,
     instantiate,
-    Color
+    Color,
+    Enum
 } from 'cc';
 
 const { ccclass, property } = _decorator;
