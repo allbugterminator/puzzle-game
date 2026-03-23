@@ -2,14 +2,20 @@
 
 一个受《Baba Is You》启发的2D微恐解谜游戏，采用Cocos Creator 3.8开发，支持微信小游戏平台。
 
-## ⚠️ 已知问题与修复
+## ⚠️ 使用方法
 
-**Cocos Creator 3.8.8 兼容性问题**：直接打开 `Game.scene` 可能会出现错误。
+**Cocos Creator 3.8.8 打开步骤**：
 
-**解决方案**：
-1. 先打开 `GameSimple.scene`（简化场景，无自定义组件）
-2. 或查看 `REPAIR_GUIDE.md` 获取详细修复步骤
-3. 已修改 `settings/project.json` 的 `moduleFormat` 为 `cjs`
+1. 克隆项目后，在 Cocos Creator 中打开 `puzzle-game` 文件夹
+2. **新建场景**（Ctrl + N）
+3. **保存场景**（Ctrl + S）为 `Game.scene`
+4. **添加游戏组件**：
+   - 在 Canvas 下创建节点
+   - 添加自定义脚本组件（GridSystem, GameController 等）
+   - 配置组件属性
+5. **保存并预览**
+
+详见 `REPAIR_GUIDE.md` 获取详细步骤。
 
 ---
 
