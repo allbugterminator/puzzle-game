@@ -1,0 +1,44 @@
+{
+  "general": {
+    "designResolution": {
+      "width": 750,
+      "height": 1334,
+      "fitWidth": false,
+      "fitHeight": true
+    },
+    "renderPipeline": "internal/builtin-forward.rpp",
+    "renderingDebugView": false
+  },
+  "physics": {
+    "enabled": false
+  },
+  "scripting": {
+    "moduleFormat": "esm"
+  },
+  "layer": [
+    {
+      "name": "DEFAULT",
+      "value": 1
+    },
+    {
+      "name": "BACKGROUND",
+      "value": 2
+    },
+    {
+      "name": "GAME",
+      "value": 4
+    },
+    {
+      "name": "UI",
+      "value": 8
+    },
+    {
+      "name": "EFFECT",
+      "value": 16
+    },
+    {
+      "name": "OVERLAY",
+      "value": 32
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "version": "1.0",
+  "level": {
+    "meta": {
+      "id": "1-3",
+      "name": "规则觉醒",
+      "chapter": 1,
+      "difficulty": 2,
+      "unlock_condition": "1-2",
+      "stars": {
+        "one": "完成关卡",
+        "two": "25步内完成",
+        "three": "20步内完成"
+      }
+    },
+    "grid": {
+      "width": 10,
+      "height": 8,
+      "cell_size": 64
+    },
+    "camera": {
+      "type": "fixed",
+      "position": { "x": 5, "y": 4 },
+      "zoom": 1.0
+    },
+    "entities": [
+      {
+        "id": "player",
+        "type": "player",
+        "position": { "x": 1, "y": 4 },
+        "properties": {
+          "moveable": true,
+          "pushable": false
+        }
+      },
+      {
+        "id": "block_1",
+        "type": "block",
+        "position": { "x": 7, "y": 4 },
+        "properties": {
+          "moveable": true,
+          "pushable": true,
+          "solid": true
+        }
+      },
+      {
+        "id": "goal",
+        "type": "goal",
+        "position": { "x": 8, "y": 6 },
+        "properties": {
+          "activation_type": "block_on_top"
+        }
+      }
+    ],
+    "walls": [
+      { "x": 0, "y": 0 }, { "x": 1, "y": 0 }, { "x": 2, "y": 0 }, { "x": 3, "y": 0 },
+      { "x": 4, "y": 0 }, { "x": 5, "y": 0 }, { "x": 6, "y": 0 }, { "x": 7, "y": 0 },
+      { "x": 8, "y": 0 }, { "x": 9, "y": 0 },
+      { "x": 0, "y": 7 }, { "x": 1, "y": 7 }, { "x": 2, "y": 7 }, { "x": 3, "y": 7 },
+      { "x": 4, "y": 7 }, { "x": 5, "y": 7 }, { "x": 6, "y": 7 }, { "x": 7, "y": 7 },
+      { "x": 8, "y": 7 }, { "x": 9, "y": 7 },
+      { "x": 0, "y": 1 }, { "x": 0, "y": 2 }, { "x": 0, "y": 3 }, { "x": 0, "y": 4 },
+      { "x": 0, "y": 5 }, { "x": 0, "y": 6 },
+      { "x": 9, "y": 1 }, { "x": 9, "y": 2 }, { "x": 9, "y": 3 }, { "x": 9, "y": 4 },
+      { "x": 9, "y": 5 }, { "x": 9, "y": 6 }
+    ],
+    "rules": {
+      "initial": [
+        {
+          "subject": "player",
+          "verb": "IS",
+          "object": "YOU"
+        },
+        {
+          "subject": "wall",
+          "verb": "IS",
+          "object": "STOP"
+        },
+        {
+          "subject": "block",
+          "verb": "IS",
+          "object": "STOP"
+        },
+        {
+          "subject": "goal",
+          "verb": "IS",
+          "object": "WIN"
+        }
+      ],
+      "text_blocks": [
+        {
+          "id": "text_you",
+          "text": "你",
+          "position": { "x": 1, "y": 1 },
+          "pushable": true
+        },
+        {
+          "id": "text_is",
+          "text": "是",
+          "position": { "x": 4, "y": 1 },
+          "pushable": true
+        },
+        {
+          "id": "text_push",
+          "text": "可推",
+          "position": { "x": 7, "y": 1 },
+          "pushable": true
+        }
+      ]
+    },
+    "win_condition": {
+      "type": "block_on_goal",
+      "params": {
+        "block_type": "block",
+        "target_id": "goal"
+      }
+    },
+    "atmosphere": {
+      "background": "#1A1A2E",
+      "vignette": 0.45,
+      "grain": 0.03
+    },
+    "hints": [
+      {
+        "trigger": "start",
+        "text": "推动规则文字组成'方块是可推'来改变规则"
+      },
+      {
+        "trigger": "idle_30s",
+        "text": "试着将'是'放在'方块'和'可推'之间"
+      }
+    ]
+  }
+}

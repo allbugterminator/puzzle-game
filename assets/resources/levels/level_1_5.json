@@ -1,0 +1,109 @@
+{
+  "version": "1.0",
+  "level": {
+    "meta": {
+      "id": "1-5",
+      "name": "胜利之路",
+      "chapter": 1,
+      "difficulty": 2,
+      "unlock_condition": "1-4",
+      "stars": {
+        "one": "完成关卡",
+        "two": "20步内完成",
+        "three": "15步内完成"
+      }
+    },
+    "grid": {
+      "width": 10,
+      "height": 10,
+      "cell_size": 64
+    },
+    "camera": {
+      "type": "fixed",
+      "position": { "x": 5, "y": 5 },
+      "zoom": 1.0
+    },
+    "entities": [
+      {
+        "id": "player",
+        "type": "player",
+        "position": { "x": 2, "y": 5 },
+        "properties": {
+          "moveable": true,
+          "pushable": false
+        }
+      }
+    ],
+    "walls": [
+      { "x": 0, "y": 0 }, { "x": 1, "y": 0 }, { "x": 2, "y": 0 }, { "x": 3, "y": 0 },
+      { "x": 4, "y": 0 }, { "x": 5, "y": 0 }, { "x": 6, "y": 0 }, { "x": 7, "y": 0 },
+      { "x": 8, "y": 0 }, { "x": 9, "y": 0 },
+      { "x": 0, "y": 9 }, { "x": 1, "y": 9 }, { "x": 2, "y": 9 }, { "x": 3, "y": 9 },
+      { "x": 4, "y": 9 }, { "x": 5, "y": 9 }, { "x": 6, "y": 9 }, { "x": 7, "y": 9 },
+      { "x": 8, "y": 9 }, { "x": 9, "y": 9 },
+      { "x": 0, "y": 1 }, { "x": 0, "y": 2 }, { "x": 0, "y": 3 }, { "x": 0, "y": 4 },
+      { "x": 0, "y": 5 }, { "x": 0, "y": 6 }, { "x": 0, "y": 7 }, { "x": 0, "y": 8 },
+      { "x": 9, "y": 1 }, { "x": 9, "y": 2 }, { "x": 9, "y": 3 }, { "x": 9, "y": 4 },
+      { "x": 9, "y": 5 }, { "x": 9, "y": 6 }, { "x": 9, "y": 7 }, { "x": 9, "y": 8 }
+    ],
+    "rules": {
+      "initial": [
+        {
+          "subject": "player",
+          "verb": "IS",
+          "object": "YOU"
+        },
+        {
+          "subject": "wall",
+          "verb": "IS",
+          "object": "STOP"
+        }
+      ],
+      "text_blocks": [
+        {
+          "id": "text_you",
+          "text": "你",
+          "position": { "x": 1, "y": 1 },
+          "pushable": true
+        },
+        {
+          "id": "text_is",
+          "text": "是",
+          "position": { "x": 4, "y": 1 },
+          "pushable": true
+        },
+        {
+          "id": "text_win",
+          "text": "胜利",
+          "position": { "x": 7, "y": 1 },
+          "pushable": true
+        }
+      ]
+    },
+    "win_condition": {
+      "type": "rule_active",
+      "params": {
+        "rule": {
+          "subject": "player",
+          "verb": "IS",
+          "object": "WIN"
+        }
+      }
+    },
+    "atmosphere": {
+      "background": "#1A1A2E",
+      "vignette": 0.5,
+      "grain": 0.04
+    },
+    "hints": [
+      {
+        "trigger": "start",
+        "text": "组成'你是胜利'来直接获胜"
+      },
+      {
+        "trigger": "idle_30s",
+        "text": "推动文字排成一行：你-是-胜利"
+      }
+    ]
+  }
+}

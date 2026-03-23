@@ -1,0 +1,29 @@
+{
+  "name": "puzzle-game",
+  "version": "1.0.0",
+  "description": "2D微恐解谜游戏 - 微信小游戏",
+  "author": "Game Studio",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Use Cocos Creator to build'",
+    "preview": "echo 'Use Cocos Creator preview'",
+    "lint": "eslint assets/scripts --ext .ts"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "cocos-creator": "^3.8.0"
+  },
+  "keywords": [
+    "cocos-creator",
+    "wechat-game",
+    "puzzle",
+    "horror",
+    "baba-is-you"
+  ],
+  "license": "MIT"
+}

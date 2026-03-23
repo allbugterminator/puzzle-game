@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "level": {
+    "meta": {
+      "id": "1-1",
+      "name": "欢迎来到迷雾",
+      "chapter": 1,
+      "difficulty": 1,
+      "unlock_condition": "none",
+      "stars": {
+        "one": "完成关卡",
+        "two": "12步内完成",
+        "three": "10步内完成"
+      }
+    },
+    "grid": {
+      "width": 8,
+      "height": 8,
+      "cell_size": 64
+    },
+    "camera": {
+      "type": "fixed",
+      "position": { "x": 4, "y": 4 },
+      "zoom": 1.0
+    },
+    "entities": [
+      {
+        "id": "player",
+        "type": "player",
+        "position": { "x": 1, "y": 1 },
+        "properties": {
+          "moveable": true,
+          "pushable": false
+        }
+      },
+      {
+        "id": "goal",
+        "type": "goal",
+        "position": { "x": 6, "y": 6 },
+        "properties": {
+          "activation_type": "touch"
+        }
+      }
+    ],
+    "walls": [
+      { "x": 0, "y": 0 }, { "x": 1, "y": 0 }, { "x": 2, "y": 0 }, { "x": 3, "y": 0 },
+      { "x": 4, "y": 0 }, { "x": 5, "y": 0 }, { "x": 6, "y": 0 }, { "x": 7, "y": 0 },
+      { "x": 0, "y": 7 }, { "x": 1, "y": 7 }, { "x": 2, "y": 7 }, { "x": 3, "y": 7 },
+      { "x": 4, "y": 7 }, { "x": 5, "y": 7 }, { "x": 6, "y": 7 }, { "x": 7, "y": 7 },
+      { "x": 0, "y": 1 }, { "x": 0, "y": 2 }, { "x": 0, "y": 3 }, { "x": 0, "y": 4 },
+      { "x": 0, "y": 5 }, { "x": 0, "y": 6 }, { "x": 7, "y": 1 }, { "x": 7, "y": 2 },
+      { "x": 7, "y": 3 }, { "x": 7, "y": 4 }, { "x": 7, "y": 5 }, { "x": 7, "y": 6 },
+      { "x": 3, "y": 3 }, { "x": 3, "y": 4 }, { "x": 4, "y": 3 }, { "x": 4, "y": 4 }
+    ],
+    "rules": {
+      "initial": [
+        {
+          "subject": "player",
+          "verb": "IS",
+          "object": "YOU"
+        },
+        {
+          "subject": "wall",
+          "verb": "IS",
+          "object": "STOP"
+        },
+        {
+          "subject": "goal",
+          "verb": "IS",
+          "object": "WIN"
+        }
+      ],
+      "text_blocks": []
+    },
+    "win_condition": {
+      "type": "reach_goal",
+      "params": {
+        "entity_id": "player",
+        "target_id": "goal"
+      }
+    },
+    "atmosphere": {
+      "background": "#1A1A2E",
+      "vignette": 0.4,
+      "grain": 0.02
+    },
+    "hints": [
+      {
+        "trigger": "start",
+        "text": "点击目标位置移动，到达绿色目标点过关"
+      }
+    ]
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "version": "1.0.0",
+  "levels": [
+    {
+      "id": 101,
+      "name": "1-1 初醒",
+      "difficulty": 1,
+      "theme": "intro",
+      "grid": {
+        "width": 8,
+        "height": 8,
+        "cellSize": 80
+      },
+      "hint": "滑动屏幕移动，前往出口",
+      "targetMoves": 8,
+      "environment": {
+        "background": "factory_floor_1",
+        "music": "ambient_slow",
+        "lighting": "dim"
+      },
+      "entities": [
+        {
+          "id": "player",
+          "type": "player",
+          "position": {"x": 1, "y": 1},
+          "properties": {}
+        },
+        {
+          "id": "exit",
+          "type": "goal",
+          "position": {"x": 6, "y": 6},
+          "properties": {}
+        },
+        {
+          "id": "wall_1",
+          "type": "obstacle",
+          "position": {"x": 3, "y": 3},
+          "properties": {}
+        },
+        {
+          "id": "wall_2",
+          "type": "obstacle",
+          "position": {"x": 3, "y": 4},
+          "properties": {}
+        },
+        {
+          "id": "wall_3",
+          "type": "obstacle",
+          "position": {"x": 4, "y": 3},
+          "properties": {}
+        }
+      ],
+      "rules": [],
+      "winCondition": {
+        "type": "reach_goal",
+        "params": {"targetId": "exit"}
+      }
+    },
+    {
+      "id": 102,
+      "name": "1-2 推动",
+      "difficulty": 1,
+      "theme": "intro",
+      "grid": {
+        "width": 8,
+        "height": 8,
+        "cellSize": 80
+      },
+      "hint": "推方块到目标位置",
+      "targetMoves": 12,
+      "environment": {
+        "background": "factory_floor_1",
+        "music": "ambient_slow",
+        "lighting": "dim"
+      },
+      "entities": [
+        {
+          "id": "player",
+          "type": "player",
+          "position": {"x": 1, "y": 4},
+          "properties": {}
+        },
+        {
+          "id": "block_1",
+          "type": "push_block",
+          "position": {"x": 3, "y": 4},
+          "properties": {"movable": true}
+        },
+        {
+          "id": "target_1",
+          "type": "target",
+          "position": {"x": 6, "y": 4},
+          "properties": {}
+        },
+        {
+          "id": "wall_1",
+          "type": "obstacle",
+          "position": {"x": 5, "y": 3},
+          "properties": {}
+        },
+        {
+          "id": "wall_2",
+          "type": "obstacle",
+          "position": {"x": 5, "y": 5},
+          "properties": {}
+        }
+      ],
+      "rules": [],
+      "winCondition": {
+        "type": "blocks_on_targets",
+        "params": {"blockIds": ["block_1"], "targetIds": ["target_1"]}
+      }
+    },
+    {
+      "id": 103,
+      "name": "1-3 规则初识",
+      "difficulty": 2,
+      "theme": "intro",
+      "grid": {
+        "width": 10,
+        "height": 8,
+        "cellSize": 80
+      },
+      "hint": "规则文字可以推动，试试改变规则",
+      "targetMoves": 15,
+      "environment": {
+        "background": "factory_floor_2",
+        "music": "ambient_tense",
+        "lighting": "dim"
+      },
+      "entities": [
+        {
+          "id": "player",
+          "type": "player",
+          "position": {"x": 2, "y": 3},
+          "properties": {}
+        },
+        {
+          "id": "exit",
+          "type": "goal",
+          "position": {"x": 8, "y": 3},
+          "properties": {}
+        },
+        {
+          "id": "text_你",
+          "type": "rule_text",
+          "position": {"x": 1, "y": 6},
+          "properties": {"text": "你"}
+        },
+        {
+          "id": "text_是",
+          "type": "rule_text",
+          "position": {"x": 2, "y": 6},
+          "properties": {"text": "是"}
+        },
+        {
+          "id": "text_可推",
+          "type": "rule_text",
+          "position": {"x": 3, "y": 6},
+          "properties": {"text": "可推"}
+        },
+        {
+          "id": "block_1",
+          "type": "block",
+          "position": {"x": 6, "y": 3},
+          "properties": {"movable": false}
+        },
+        {
+          "id": "wall_1",
+          "type": "obstacle",
+          "position": {"x": 7, "y": 2},
+          "properties": {}
+        },
+        {
+          "id": "wall_2",
+          "type": "obstacle",
+          "position": {"x": 7, "y": 4},
+          "properties": {}
+        }
+      ],
+      "rules": [
+        {"subject": "block_1", "verb": "IS", "object": "OBSTACLE"}
+      ],
+      "winCondition": {
+        "type": "reach_goal",
+        "params": {"targetId": "exit"}
+      }
+    },
+    {
+      "id": 104,
+      "name": "1-4 规则重构",
+      "difficulty": 2,
+      "theme": "intro",
+      "grid": {
+        "width": 10,
+        "height": 9,
+        "cellSize": 80
+      },
+      "hint": "重新排列规则，突破障碍",
+      "targetMoves": 18,
+      "environment": {
+        "background": "factory_floor_2",
+        "music": "ambient_tense",
+        "lighting": "dim"
+      },
+      "entities": [
+        {
+          "id": "player",
+          "type": "player",
+          "position": {"x": 1, "y": 4},
+          "properties": {}
+        },
+        {
+          "id": "exit",
+          "type": "goal",
+          "position": {"x": 8, "y": 4},
+          "properties": {}
+        },
+        {
+          "id": "text_你",
+          "type": "rule_text",
+          "position": {"x": 2, "y": 1},
+          "properties": {"text": "你"}
+        },
+        {
+          "id": "text_是",
+          "type": "rule_text",
+          "position": {"x": 3, "y": 1},
+          "properties": {"text": "是"}
+        },
+        {
+          "id": "text_我",
+          "type": "rule_text",
+          "position": {"x": 5, "y": 1},
+          "properties": {"text": "我"}
+        },
+        {
+          "id": "text_可推",
+          "type": "rule_text",
+          "position": {"x": 6, "y": 1},
+          "properties": {"text": "可推"}
+        },
+        {
+          "id": "text_墙",
+          "type": "rule_text",
+          "position": {"x": 2, "y": 7},
+          "properties": {"text": "墙"}
+        },
+        {
+          "id": "text_障碍",
+          "type": "rule_text",
+          "position": {"x": 4, "y": 7},
+          "properties": {"text": "障碍"}
+        },
+        {
+          "id": "block_1",
+          "type": "block",
+          "position": {"x": 5, "y": 4},
+          "properties": {"movable": false}
+        },
+        {
+          "id": "wall_1",
+          "type": "obstacle",
+          "position": {"x": 4, "y": 4},
+          "properties": {}
+        },
+        {
+          "id": "wall_2",
+          "type": "obstacle",
+          "position": {"x": 6, "y": 4},
+          "properties": {}
+        }
+      ],
+      "rules": [
+        {"subject": "block_1", "verb": "IS", "object": "OBSTACLE"},
+        {"subject": "wall_1", "verb": "IS", "object": "OBSTACLE"},
+        {"subject": "wall_2", "verb": "IS", "object": "OBSTACLE"}
+      ],
+      "winCondition": {
+        "type": "reach_goal",
+        "params": {"targetId": "exit"}
+      }
+    },
+    {
+      "id": 105,
+      "name": "1-5 你就是胜利",
+      "difficulty": 3,
+      "theme": "intro",
+      "grid": {
+        "width": 10,
+        "height": 10,
+        "cellSize": 80
+      },
+      "hint": "你就是胜利本身",
+      "targetMoves": 20,
+      "environment": {
+        "background": "factory_floor_3",
+        "music": "ambient_tense",
+        "lighting": "dark"
+      },
+      "entities": [
+        {
+          "id": "player",
+          "type": "player",
+          "position": {"x": 1, "y": 1},
+          "properties": {}
+        },
+        {
+          "id": "text_你",
+          "type": "rule_text",
+          "position": {"x": 2, "y": 5},
+          "properties": {"text": "你"}
+        },
+        {
+          "id": "text_是",
+          "type": "rule_text",
+          "position": {"x": 3, "y": 5},
+          "properties": {"text": "是"}
+        },
+        {
+          "id": "text_胜利",
+          "type": "rule_text",
+          "position": {"x": 4, "y": 5},
+          "properties": {"text": "胜利"}
+        },
+        {
+          "id": "text_障碍",
+          "type": "rule_text",
+          "position": {"x": 7, "y": 2},
+          "properties": {"text": "障碍"}
+        },
+        {
+          "id": "text_墙",
+          "type": "rule_text",
+          "position": {"x": 7, "y": 3},
+          "properties": {"text": "墙"}
+        },
+        {
+          "id": "block_1",
+          "type": "block",
+          "position": {"x": 5, "y": 5},
+          "properties": {"movable": false}
+        },
+        {
+          "id": "wall_1",
+          "type": "obstacle",
+          "position": {"x": 5, "y": 1},
+          "properties": {}
+        },
+        {
+          "id": "wall_2",
+          "type": "obstacle",
+          "position": {"x": 5, "y": 2},
+          "properties": {}
+        },
+        {
+          "id": "wall_3",
+          "type": "obstacle",
+          "position": {"x": 5, "y": 3},
+          "properties": {}
+        },
+        {
+          "id": "wall_4",
+          "type": "obstacle",
+          "position": {"x": 5, "y": 7},
+          "properties": {}
+        },
+        {
+          "id": "wall_5",
+          "type": "obstacle",
+          "position": {"x": 5, "y": 8},
+          "properties": {}
+        }
+      ],
+      "rules": [
+        {"subject": "block_1", "verb": "IS", "object": "OBSTACLE"}
+      ],
+      "winCondition": {
+        "type": "custom_rule",
+        "params": {"rule": "你 IS 胜利"}
+      }
+    }
+  ]
+}
