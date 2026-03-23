@@ -65,7 +65,7 @@
                 "_targetTexture": null
               },
               {
-                "__type__": "VignetteEffect",
+                "__type__": "scripts.gameplay.effects.VignetteEffect",
                 "_name": "",
                 "_objFlags": 0,
                 "node": {
@@ -179,7 +179,7 @@
                 "_miterLimit": 10
               },
               {
-                "__type__": "GridSystem",
+                "__type__": "scripts.gameplay.GridSystem",
                 "_name": "",
                 "_objFlags": 0,
                 "node": {
@@ -673,7 +673,7 @@
                 }
               },
               {
-                "__type__": "GameController",
+                "__type__": "scripts.gameplay.controllers.GameController",
                 "_name": "",
                 "_objFlags": 0,
                 "node": {
@@ -702,7 +702,7 @@
                 "vignetteEffect": null
               },
               {
-                "__type__": "PlayerController",
+                "__type__": "scripts.gameplay.PlayerController",
                 "_name": "",
                 "_objFlags": 0,
                 "node": {
@@ -720,7 +720,7 @@
                 "enableClick": true
               },
               {
-                "__type__": "EntityFactory",
+                "__type__": "scripts.gameplay.EntityFactory",
                 "_name": "",
                 "_objFlags": 0,
                 "node": {
@@ -734,7 +734,7 @@
                 "cellSize": 64
               },
               {
-                "__type__": "RuleSystem",
+                "__type__": "scripts.gameplay.RuleSystem",
                 "_name": "",
                 "_objFlags": 0,
                 "node": {
@@ -954,6 +954,9 @@
         },
         "_depth": 0
       }
+    }
+  }
+}
     }
   }
 }
