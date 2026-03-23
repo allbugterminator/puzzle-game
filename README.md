@@ -2,6 +2,17 @@
 
 一个受《Baba Is You》启发的2D微恐解谜游戏，采用Cocos Creator 3.8开发，支持微信小游戏平台。
 
+## ⚠️ 已知问题与修复
+
+**Cocos Creator 3.8.8 兼容性问题**：直接打开 `Game.scene` 可能会出现错误。
+
+**解决方案**：
+1. 先打开 `GameSimple.scene`（简化场景，无自定义组件）
+2. 或查看 `REPAIR_GUIDE.md` 获取详细修复步骤
+3. 已修改 `settings/project.json` 的 `moduleFormat` 为 `cjs`
+
+---
+
 ## 项目概述
 
 - **游戏类型**: 2D网格解谜 + 微恐氛围

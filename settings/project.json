@@ -13,7 +13,7 @@
     "enabled": false
   },
   "scripting": {
-    "moduleFormat": "esm"
+    "moduleFormat": "cjs"
   },
   "layer": [
     {
