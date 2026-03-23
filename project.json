@@ -1,0 +1,9 @@
+{
+  "name": "puzzle-game",
+  "type": "3d",
+  "version": "3.8.0",
+  "creator": {
+    "version": "3.8.0"
+  },
+  "dependencies": {}
+}
